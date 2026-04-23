@@ -43,7 +43,7 @@ form {
     text-align: center;
     padding: 20px;
     /* Suponiendo que bg-form.png está en la carpeta de imágenes principal */
-    background: rgba(0,0,0,0.2) url('../../imgs-registro/bg-form.png') no-repeat bottom center;
+    background: rgba(0,0,0,0.2) url('../imgs/bg-form.png') no-repeat bottom center;
 }
 
 form ul { 
@@ -59,8 +59,8 @@ form h1 {
     font-family: 'AcknowledgementMedium', sans-serif;
     font-size: 2.5em;
     padding: 40px 0;
-    background-image: url('../../imgs-registro/bg-formtitle-left.png'), 
-                      url('../../imgs-registro/bg-formtitle-right.png');
+    background-image: url('../imgs-registro/bg-formtitle-left.png'), 
+                      url('../imgs-registro/bg-formtitle-right.png');
     background-position: left center, right center;
     background-repeat: no-repeat;
     background-size: 100px auto; /* Redimensionadas a 100px */
@@ -97,17 +97,17 @@ input {
 
 /* Requisito: Marcado de campos obligatorios con required.png */
 input:required {
-    background: url('../../imgs-registro/required.png') no-repeat right center;
+    background: url('../imgs-registro/required.png') no-repeat right center;
 }
 
 /* Requisito: Marcado de campos válidos con foco */
 input:focus:valid {
-    background: url('../../imgs-registro/valid.png') no-repeat right center;
+    background: url('../imgs-registro/valid.png') no-repeat right center;
 }
 
 /* Requisito: Marcado de campos inválidos con foco */
 input:focus:invalid {
-    background: url('../../imgs-registro/invalid.png') no-repeat right center;
+    background: url('../imgs-registro/invalid.png') no-repeat right center;
 }
 
 /* Correcciones para tipos específicos */
