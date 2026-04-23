@@ -1,14 +1,20 @@
 /* ==========================================================================
-   1. INCORPORACIÓN DE FUENTES (Asegúrate de tener la carpeta fonts)
+   1. INCORPORACIÓN DE FUENTES (@font-face)
    ========================================================================== */
 @font-face {
     font-family: 'LeagueGothic';
-    src: url('../fonts/LeagueGothic.otf'); 
+    src: url('../fonts/League_Gothic-webfont.woff') format('woff'),
+         url('../fonts/League_Gothic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'AcknowledgementMedium';
-    src: url('../fonts/Acknowledgement.otf');
+    src: url('../fonts/Acknowledgement-webfont.woff') format('woff'),
+         url('../fonts/Acknowledgement-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* ==========================================================================
@@ -19,6 +25,7 @@
     padding: 0;
 }
 
+/* Requisito: Personalización de la selección de texto */
 ::selection {
     background-color: #484848;
     color: #fff;
@@ -35,26 +42,33 @@ form {
     width: 710px;
     text-align: center;
     padding: 20px;
-    /* Ajusta esta ruta si bg-form.png está en otra carpeta */
-    background: rgba(0,0,0,0.2) url('../imgs/bg-form.png') no-repeat bottom center;
+    /* Suponiendo que bg-form.png está en la carpeta de imágenes principal */
+    background: rgba(0,0,0,0.2) url('../../imgs-registro/bg-form.png') no-repeat bottom center;
 }
 
-form ul { list-style-type: none; }
-form ul li { margin-bottom: 15px; }
+form ul { 
+    list-style-type: none; 
+}
 
-/* Título con doble imagen de fondo (Rutas corregidas según tu captura) */
+form ul li { 
+    margin-bottom: 15px; 
+}
+
+/* Requisito: Título con doble imagen de fondo y fuente Acknowledgement */
 form h1 {
     font-family: 'AcknowledgementMedium', sans-serif;
     font-size: 2.5em;
     padding: 40px 0;
-    background-image: url('../imgs-registro/bg-formtitle-left.png'), url('../imgs-registro/bg-formtitle-right.png');
+    background-image: url('../../imgs-registro/bg-formtitle-left.png'), 
+                      url('../../imgs-registro/bg-formtitle-right.png');
     background-position: left center, right center;
     background-repeat: no-repeat;
-    background-size: 100px auto;
+    background-size: 100px auto; /* Redimensionadas a 100px */
 }
 
+/* Requisito: Labels con fuente LeagueGothic */
 label {
-    font-family: 'LeagueGothic', Tahoma, sans-serif;
+    font-family: 'LeagueGothic', sans-serif;
     display: block;
     margin: auto;
     text-align: center;
@@ -63,7 +77,7 @@ label {
 }
 
 /* ==========================================================================
-   4. INPUTS Y ESTADOS DE VALIDACIÓN (Rutas corregidas)
+   4. INPUTS Y ESTADOS DE VALIDACIÓN
    ========================================================================== */
 input { 
     vertical-align: middle;  
@@ -81,35 +95,47 @@ input {
     text-align: center;
 }
 
-/* Marcado de campos según validación */
+/* Requisito: Marcado de campos obligatorios con required.png */
 input:required {
-    background: url('../imgs-registro/required.png') no-repeat right center;
+    background: url('../../imgs-registro/required.png') no-repeat right center;
 }
 
+/* Requisito: Marcado de campos válidos con foco */
 input:focus:valid {
-    background: url('../imgs-registro/valid.png') no-repeat right center;
+    background: url('../../imgs-registro/valid.png') no-repeat right center;
 }
 
+/* Requisito: Marcado de campos inválidos con foco */
 input:focus:invalid {
-    background: url('../imgs-registro/invalid.png') no-repeat right center;
+    background: url('../../imgs-registro/invalid.png') no-repeat right center;
 }
 
-/* Casos especiales */
+/* Correcciones para tipos específicos */
 input[type="checkbox"] { 
     vertical-align: bottom; 
     display: inline;
     width: auto;
-    background: none !important;
+    background: none !important; /* Quitar iconos de validación en checkboxes */
 }
 
-input[type="range"] { border: none; }
+input[type="range"] { 
+    border: none; 
+}
 
-label[for=cantidad], #cantidad { display: inline; }
-#cantidad { width: 40px; display: inline; padding: 0; }
+label[for="cantidad"], #cantidad { 
+    display: inline; 
+}
+
+#cantidad { 
+    width: 40px; 
+    display: inline; 
+    padding: 0; 
+}
 
 /* ==========================================================================
    5. BOTÓN DE ENVÍO
    ========================================================================== */
+/* Requisito: El botón debe usar la fuente LeagueGothic */
 #registro-submit {
     cursor: pointer;
     border: none;
@@ -127,4 +153,6 @@ label[for=cantidad], #cantidad { display: inline; }
     width: auto;
 }
 
-#registro-submit:hover { opacity: 1; }
+#registro-submit:hover { 
+    opacity: 1; 
+}
