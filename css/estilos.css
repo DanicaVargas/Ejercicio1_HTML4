@@ -36,7 +36,7 @@ form {
     text-align: center;
     padding: 20px;
     /* Ajusta esta ruta si bg-form.png está en otra carpeta */
-    background: rgba(0,0,0,0.2) url('../../imgs-registro/bg-form.png') no-repeat bottom center;
+    background: rgba(0,0,0,0.2) url('../imgs/bg-form.png') no-repeat bottom center;
 }
 
 form ul { list-style-type: none; }
@@ -47,7 +47,7 @@ form h1 {
     font-family: 'AcknowledgementMedium', sans-serif;
     font-size: 2.5em;
     padding: 40px 0;
-    background-image: url('../../imgs-registro/bg-formtitle-left.png'), url('../../imgs-registro/bg-formtitle-right.png');
+    background-image: url('../imgs-registro/bg-formtitle-left.png'), url('../imgs-registro/bg-formtitle-right.png');
     background-position: left center, right center;
     background-repeat: no-repeat;
     background-size: 100px auto;
@@ -83,15 +83,15 @@ input {
 
 /* Marcado de campos según validación */
 input:required {
-    background: url('../../imgs-registro/required.png') no-repeat right center;
+    background: url('../imgs-registro/required.png') no-repeat right center;
 }
 
 input:focus:valid {
-    background: url('../../imgs-registro/valid.png') no-repeat right center;
+    background: url('../imgs-registro/valid.png') no-repeat right center;
 }
 
 input:focus:invalid {
-    background: url('../../imgs-registro/invalid.png') no-repeat right center;
+    background: url('../imgs-registro/invalid.png') no-repeat right center;
 }
 
 /* Casos especiales */
